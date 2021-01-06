@@ -57,12 +57,12 @@ const configs = {
     API_EXPLORER_PATH: process.env.APPAPIEXPLORERPATH || '',
     // Server Setting
     HOST: process.env.APPHOST || 'localhost',
-    PORT: process.env.APPPORT || 7072,
+    PORT: process.env.APPPORT || 7073,
 
     EVENT_STORE_SETTINGS: {
-      protocol: process.env.EVENTSTOREPROTOCOL || 'http',
-      hostname: process.env.EVENTSTOREHOSTNAME || '0.0.0.0',
-      tcpPort: process.env.EVENTSTORETCPPORT || 1113,
+      protocol: process.env.EVENTSTOREPROTOCOL || 'amqp',
+      hostname: process.env.EVENTSTOREHOSTNAME || 'localhost',
+      tcpPort: process.env.EVENTSTORETCPPORT || 5672,
       httpPort: process.env.EVENTSTOREHTTPPORT || 2113,
       credentials: {
         username: process.env.EVENTSTORECREDENTIALSUSERNAME || 'lib-test',
@@ -93,10 +93,10 @@ const configs = {
   },
   development: {},
   production: {
-    PORT: process.env.APPPORT || 7072,
+    PORT: process.env.APPPORT || 7073,
   },
   test: {
-    PORT: 7072,
+    PORT: 7073,
   },
 };
 
